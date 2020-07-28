@@ -1,0 +1,120 @@
+.header-image {
+    height: 40%;
+    width: 100%;
+    max-height: 600px;
+}
+
+.header {
+    color: #00428c;
+}
+
+.product-image {
+    height: 50%;
+    width: 50%;
+}
+
+.form-control {
+    float: right;
+}
+.item-image {
+    height: 20%;
+    width: 20%;
+}
+/* 
+.item-image-info {
+
+    display: inline-block;
+    border-style: solid;
+    border-color: rgb(223, 223, 223);
+    width: 100%;
+    height: 60%;
+    overflow: auto;
+    padding: 02% 0% 02% 02%;
+    text-align: center;
+    margin: 02%;
+} */
+
+.footer {
+    height: 20%;
+    width: 100%;
+    text-align: center;
+    background-color: #587486;
+    color: white;
+    /* min-height: 100px; */
+    padding: 02%;
+}
+
+.main-body h1 {
+    /* display: inline-block;
+    border-style: solid;
+    border-color: black; */
+    text-align: center;
+}
+
+.my_search_text {
+    padding-top: 20px;
+}
+.cart-image {
+    height: 50%;
+    width: 50%;
+}
+.my_row_class .mx-auto p {
+    color: black;
+    font-size: 12px;
+}
+
+.center {
+    text-align: center;
+    color: #587486;
+    padding: 2%;
+}
+
+.my_row_class .mx-auto p a {
+    color: black;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.my_bottom_margin {
+    margin-bottom: 10px;
+}
+
+.card-body h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+.card_img_top {
+    border-color: white;
+}
+
+a {
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    text-decoration: none;
+    color: black;
+}
+.smol-icon {
+    height: 20px;
+    width: 20px;
+}
+
+/* .cart-image {
+    height: auto;
+    width: auto;
+    max-width: 50%;
+    max-height: 50%;
+} */
+
+section {
+    height: 100%;
+    width: 100%;
+    min-height: 500px;
+    padding: 02% 0 08% 01%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(https://images.unsplash.com/photo-1502656109408-152680a8ad1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80)
+    }
+

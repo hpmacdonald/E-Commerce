@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+{% block metadescription %} 
+    {% if category %}
+        {{ category.description|truncatewords:155 }}
+    {% else %}
+        Welcome to the NBA store where you can buy authentic get from your favourite teams.
+    {% endif %}
+{% endblock %}
+{% block title %}
+    {% if category %}
+        {{ cateogry.name }} - NBA Store
+    {% else %}
+       See the NBA Store
+    {% endif %} 
+{% endblock %}
+{% block content %}
+    {% if category %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <div class="row my_row_class">
+        <div class="mx-auto">
+            <p><a href="{% url 'shop:allProdCat' %}">All Products</a> | {{category.name}}</p>
+        </div>
+    </div>
+    
+    {% endif %}
+    <div>
+        {% if category %}
+        <div>
+            <h1 class="text-center">{{category.name}}</h1>
+            <p class="text-center">{{category.description}}</p>
+        </div>
+    <!-- <img class="cat-image" src="{{category.image.url}}" alt="{{category.name}}"> -->
+    </div>
+    {% else %}
+    <!-- <img src="{% static 'img/ecom.jpeg' %}" alt="Our Products Collection"> -->
+    <div class="">
+        <h1 class="center">Product Collection</h1>
+        <p></p>
+    </div>
+        {% endif %}
+    <div class="container-fluid">
+        <div class="row mx-auto">
+            {% for product in products.object_list %}
+            <div class="my_bottom_margin col-9 col-sm-12 col-md-4 col-md-12 col-lg-4"> 
+                <div class="card text-center" style="min-width: 18rem;">
+                <!-- class="item-image-info" -->
+                <a href="{{product.get_url}}"><img class="card-img-top my_image" src="{{product.image.url}}" alt="{{product.name}}"></a>
+                    <div class="card-body">
+                        <div class="row ">
+                            <div class="col"> <h4>{{product.name}}</h4>
+                                <p>${{product.price}}</p>
+                                {% if product.stock <= 0  %}
+                                <p><b>Out of Stock</b></p>
+                            {% else %}
+                                <a class="btn btn-outline-warning" href="{% url 'cart:add_cart' product.id %}"> Add to Cart</a>
+                            {% endif %}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="mx-auto">
+        {% if products.paginator.num_pages > 1 %}
+        <hr>
+        <div class="text-center">
+            {% for pg in products.paginator.page_range %}
+                <a href="?page={{pg}}" class="btn btn-light btn-sm {% if products.number == pg %}axctive{% endif %}">{{pg}}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+{% endblock %} -->
