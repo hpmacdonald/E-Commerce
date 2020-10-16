@@ -18,7 +18,7 @@ def allProdCat(request, c_slug=None):
     else:
         products_list = Product.objects.all().filter(available=True)
     # PAGINATOR CODE
-    paginator = Paginator(products_list, 6PPO)
+    paginator = Paginator(products_list, 4)
     try:
         page = int(request.GET.get('page','1'))
     except:
